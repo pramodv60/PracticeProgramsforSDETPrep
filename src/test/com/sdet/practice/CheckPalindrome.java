@@ -101,7 +101,7 @@ public class CheckPalindrome {
 
 			while (leftPointer <= rightPointer) {
 
-				if (isNullOREmpty(input[leftPointer]) && isNullOREmpty(input[rightPointer])) {
+				if (isNullOrEmpty(input[leftPointer]) && isNullOrEmpty(input[rightPointer])) {
 
 					tempString = input[rightPointer];
 					input[rightPointer] = input[leftPointer];
@@ -116,7 +116,7 @@ public class CheckPalindrome {
 		return input;
 	}
 
-	public static boolean isNullOREmpty(String inputString) {
+	public static boolean isNullOrEmpty(String inputString) {
 		return (inputString.trim() != null && !inputString.trim().isEmpty() && inputString.trim().length() > 0);
 	}
 }

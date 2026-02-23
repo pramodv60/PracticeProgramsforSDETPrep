@@ -18,7 +18,7 @@ public class AlphaNumericSeparation {
 	
 	public static HashMap<String, StringBuilder> alphaNumericSegregation(String input){
 		
-		HashMap<String, StringBuilder> countMap = new HashMap<String, StringBuilder>();
+		HashMap<String, StringBuilder> segregationMap = new HashMap<String, StringBuilder>();
 		StringBuilder alphabets = new StringBuilder() ;
 		StringBuilder digits = new StringBuilder();
 		
@@ -29,14 +29,14 @@ public class AlphaNumericSeparation {
 			for(char eachCharacter: inputCharArray) {
 				
 				if(Character.isDigit(eachCharacter)) {
-					countMap.put("Digits", alphabets.append(eachCharacter));
+					segregationMap.put("Digits", alphabets.append(eachCharacter));
 				}
 				else if(Character.isAlphabetic(eachCharacter)){
-					countMap.put("Alphabets", digits.append(eachCharacter));
+					segregationMap.put("Alphabets", digits.append(eachCharacter));
 				}			
 			}
 		}
 	
-		return countMap;
+		return segregationMap;
 	}
 }

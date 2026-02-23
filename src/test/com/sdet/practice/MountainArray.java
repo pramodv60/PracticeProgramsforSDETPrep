@@ -8,10 +8,10 @@ public class MountainArray {
 
 		int[] inputArray = { 1, 2, 3, 4, 3, 2, 1 };
 		System.out.println("Is the given Array: " + Arrays.toString(inputArray) + " MOUNTAIN ARRAY? : "
-				+ checkClimbingArray(inputArray));
+				+ isMountainArray(inputArray));
 	}
 
-	public static boolean checkClimbingArray(int[] inputArray) {
+	public static boolean isMountainArray(int[] inputArray) {
 
 		if (inputArray.length > 3) {
 

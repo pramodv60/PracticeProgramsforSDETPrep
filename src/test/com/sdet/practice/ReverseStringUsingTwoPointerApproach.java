@@ -7,10 +7,10 @@ public class ReverseStringUsingTwoPointerApproach {
 	public static void main(String[] args) {
 
 		String name = "hello";
-		System.out.println("Reversed string: " + revereseStringUsingStringBuilder(name));
+		System.out.println("Reversed string: " + reverseStringUsingStringBuilder(name));
 	}
 
-	public static String revereseStringUsingTempVariable(String input) {
+	public static String reverseStringUsingTempVariable(String input) {
 
 		char[] inputArray = null;
 		int leftPointer = 0;
@@ -35,7 +35,7 @@ public class ReverseStringUsingTwoPointerApproach {
 		return Arrays.toString(inputArray);
 	}
 
-	public static StringBuilder revereseStringUsingStringBuilder(String input) {
+	public static StringBuilder reverseStringUsingStringBuilder(String input) {
 
 		char[] inputArray = null;
 		int leftPointer = 0;

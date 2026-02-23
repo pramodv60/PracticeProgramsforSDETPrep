@@ -24,7 +24,7 @@ public class AlphaNumericCountInAString {
 			
 			char[] inputCharArray = input.toLowerCase().trim().toCharArray();
 			int digitsCounter = 0;
-			int alpahabetsCounter = 0;
+			int alphabetsCounter = 0;
 			
 			for(char eachCharacter: inputCharArray) {
 				
@@ -32,7 +32,7 @@ public class AlphaNumericCountInAString {
 					countMap.put("Digits", ++digitsCounter);
 				}
 				else if(Character.isAlphabetic(eachCharacter)){
-					countMap.put("Alphabets", ++alpahabetsCounter);
+					countMap.put("Alphabets", ++alphabetsCounter);
 				}			
 			}
 		}

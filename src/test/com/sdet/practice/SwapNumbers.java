@@ -7,12 +7,12 @@ public class SwapNumbers {
 		int a = 67;
 		int b = 77;
 
-		// method_1(a, b);
-		// method_2(a, b);
-		method_3(a, b);
+		// swapUsingTempVariable(a, b);
+		// swapUsingArithmetic(a, b);
+		swapUsingXor(a, b);
 	}
 
-	public static void method_1(int a, int b) {
+	public static void swapUsingTempVariable(int a, int b) {
 
 		int temp = 0;
 
@@ -24,7 +24,7 @@ public class SwapNumbers {
 		System.out.println("b: " + b);
 	}
 
-	public static void method_2(int a, int b) {
+	public static void swapUsingArithmetic(int a, int b) {
 
 		a = a + b;
 		b = a - b;
@@ -34,7 +34,7 @@ public class SwapNumbers {
 		System.out.println("b: " + b);
 	}
 
-	public static void method_3(int a, int b) {
+	public static void swapUsingXor(int a, int b) {
 
 		a = a ^ b;
 		b = a ^ b;
