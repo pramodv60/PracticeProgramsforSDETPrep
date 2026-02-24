@@ -14,7 +14,6 @@ public class FrequencyOfCharacters {
 			System.out
 					.println("Character: " + eachCharacter + " is repeated: " + result.get(eachCharacter) + " times.");
 		}
-
 	}
 
 	public static HashMap<Character, Integer> countFrequency(String input) {
@@ -43,7 +42,6 @@ public class FrequencyOfCharacters {
 		}
 
 		return resultMap;
-
 	}
 
 }
