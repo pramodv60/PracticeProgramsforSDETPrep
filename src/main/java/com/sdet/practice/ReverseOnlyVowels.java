@@ -4,10 +4,8 @@ public class ReverseOnlyVowels {
 
 	public static void main(String[] args) {
 		
-		
 		String input = "MUGHDa";
 		System.out.println("Vowels reversed in the string: " + vowelsReverse(input));
-
 	}
 	
 	public static String vowelsReverse(String input) {
@@ -15,11 +13,11 @@ public class ReverseOnlyVowels {
 		char[] inputArray = input.toCharArray();
 		String vowels = "aeioAEIOU";
 		
-		if (input.length() > 0) {
+		if (!input.isEmpty()) {
 			
 			int leftPointer = 0;
 			int rightPointer = inputArray.length - 1;
-			char temp;
+			char temp = ' ';
 			
 			while(leftPointer < rightPointer) {
 				
@@ -44,5 +42,4 @@ public class ReverseOnlyVowels {
 		
 		return new String(inputArray);
 	}
-
 }
