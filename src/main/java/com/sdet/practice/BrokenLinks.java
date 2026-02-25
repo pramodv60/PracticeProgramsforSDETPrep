@@ -61,7 +61,7 @@ public class BrokenLinks {
 			connection.setRequestMethod("HEAD");
 			connection.connect();
 
-			if (!(connection.getResponseCode() == 200 || connection.getResponseCode() == 201)) {
+			if (!(connection.getResponseCode() >= 200 && connection.getResponseCode() < 400)) {
 				return true;
 			}
 		}
