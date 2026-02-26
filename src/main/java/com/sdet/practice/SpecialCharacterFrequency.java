@@ -35,7 +35,7 @@ public class SpecialCharacterFrequency {
 				if(!(Character.isAlphabetic(eachCharacter) || Character.isDigit(eachCharacter))) {
 					
 					if((characterCountMap.containsKey(eachCharacter))) {
-						characterCountMap.put(eachCharacter, (characterCountMap.getOrDefault(eachCharacter, 1)) + 1);
+						characterCountMap.put(eachCharacter, (characterCountMap.getOrDefault(eachCharacter, 0)) + 1);
 					}
 					else {
 						characterCountMap.put(eachCharacter, ++counter);
