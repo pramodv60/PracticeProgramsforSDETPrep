@@ -17,10 +17,9 @@ public class AllEvenWordsOfAString {
 			for (String eachString : stringArray) {
 
 				if (isEvenLength(eachString)) {
-					System.out.println(eachString);
+					System.out.println("Even length string: " + eachString);
 				}
 			}
-
 		}
 	}
 
