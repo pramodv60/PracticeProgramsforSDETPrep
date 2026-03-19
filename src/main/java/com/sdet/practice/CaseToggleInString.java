@@ -27,6 +27,8 @@ public class CaseToggleInString {
 					else if (Character.isUpperCase(eachCharacter)) {
 						stringBuilder.append(Character.toLowerCase(eachCharacter));
 					}
+				} else if (eachCharacter == ' ') {
+					stringBuilder.append(eachCharacter);
 				}
 			}
 		}

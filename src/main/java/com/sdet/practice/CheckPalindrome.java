@@ -6,12 +6,11 @@ public class CheckPalindrome {
 
 	public static void main(String[] args) {
 
-		// String input = "A man, a plan, a canal: Panama";
-		// System.out.println("Is: " + input + " a valid Palindrome? " +
-		// palindromeCheckUsingTwoPointers(input));
+		String input = "A man, a plan, a canal: Panama";
+		System.out.println("Is: " + input + " a valid Palindrome? " + palindromeCheckUsingTwoPointers(input));
 
 		String[] inputArray = { "Anandita", "is", "in", "the", "interview" };
-		System.out.println("Array with elements reversed in the mid: " + Arrays.toString(inputArray));
+		System.out.println("Array with elements reversed in the mid: " + Arrays.toString(reverseMidArray(inputArray)));
 	}
 
 	public static boolean isPalindrome(String input) {
@@ -99,7 +98,7 @@ public class CheckPalindrome {
 			leftPointer = 1; // Start from the first element
 			rightPointer = input.length - 2; // Start from the pen-ultimate element
 
-			while (leftPointer <= rightPointer) {
+			while (leftPointer < rightPointer) {
 
 				if (isNullOrEmpty(input[leftPointer]) && isNullOrEmpty(input[rightPointer])) {
 
@@ -117,6 +116,6 @@ public class CheckPalindrome {
 	}
 
 	public static boolean isNullOrEmpty(String inputString) {
-		return (inputString.trim() != null && !inputString.trim().isEmpty() && inputString.trim().length() > 0);
+		return (inputString.trim() != null && !inputString.trim().isEmpty());
 	}
 }

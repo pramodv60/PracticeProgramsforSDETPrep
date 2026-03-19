@@ -10,14 +10,14 @@ public class RomanToInteger {
 		String romanNumberInput = "CCCXLIII";
 		System.out.println("Roman number to Integer: " + romanToInteger(romanNumberInput));
 	}
-	
+
 	public static int romanToInteger(String romanNumber) {
-		
-		Map<Character,Integer> romanNumeralsMap = new HashMap<Character, Integer>();
+
+		Map<Character, Integer> romanNumeralsMap = new HashMap<Character, Integer>();
 		int result = 0;
-		
-		if(!romanNumber.isEmpty()) {
-			
+
+		if (!romanNumber.isEmpty()) {
+
 			romanNumeralsMap.put('I', 1);
 			romanNumeralsMap.put('V', 5);
 			romanNumeralsMap.put('X', 10);
@@ -25,23 +25,22 @@ public class RomanToInteger {
 			romanNumeralsMap.put('C', 100);
 			romanNumeralsMap.put('D', 500);
 			romanNumeralsMap.put('M', 1000);
-			
+
 			int currentValue = 0;
 			int previousValue = 0;
 			char currentCharacter;
-			
-			for(int index = romanNumber.length() - 1; index >= 0; index--) {
-				
+
+			for (int index = romanNumber.length() - 1; index >= 0; index--) {
+
 				currentCharacter = romanNumber.charAt(index);
-				currentValue = romanNumeralsMap.get(currentCharacter); 
-				
-				if(currentValue >= previousValue) {
+				currentValue = romanNumeralsMap.get(currentCharacter);
+
+				if (currentValue >= previousValue) {
 					result = result + currentValue;
-				}
-				else {
+				} else {
 					result = result - currentValue;
 				}
-				
+
 				previousValue = currentValue;
 			}
 		}

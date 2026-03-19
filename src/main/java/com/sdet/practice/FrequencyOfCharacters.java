@@ -11,10 +11,10 @@ public class FrequencyOfCharacters {
 
 		Map<Character, Integer> result = countFrequency(input);
 
-		if(!(result.isEmpty())) {
+		if (!(result.isEmpty())) {
 			for (char eachCharacter : result.keySet()) {
-				System.out
-						.println("Character: " + eachCharacter + " is repeated: " + result.get(eachCharacter) + " times.");
+				System.out.println(
+						"Character: " + eachCharacter + " is repeated: " + result.get(eachCharacter) + " times.");
 			}
 		}
 	}
@@ -26,7 +26,7 @@ public class FrequencyOfCharacters {
 		int counter = 0;
 
 		if (!input.isEmpty()) {
-			
+
 			characterArray = input.toCharArray();
 			resultMap = new HashMap<Character, Integer>();
 

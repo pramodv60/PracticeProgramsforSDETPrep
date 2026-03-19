@@ -5,6 +5,7 @@ public class CharactersOnly {
 	public static void main(String[] args) {
 
 		String input = "r@vi56 ku%$mar 67";
+		// Output: rvi kumar 24
 		System.out.println(characterOnly(input));
 	}
 
