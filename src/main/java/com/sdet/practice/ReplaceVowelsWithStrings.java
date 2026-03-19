@@ -13,12 +13,12 @@ public class ReplaceVowelsWithStrings {
 		String vowels = "aeiouAEIOU";
 		char[] characterArray = null;
 		
-		if(input.length() > 0 ) {
+		if(!input.isEmpty() ) {
 			
 			characterArray = input.toCharArray();
 			
 			for(int index = 0; index < characterArray.length; index++){
-				if(! (vowels.indexOf(characterArray[index]) == -1) ) {
+				if((vowels.indexOf(characterArray[index]) != -1) ) {
 					characterArray[index] = 'X';
 				}
 			}		

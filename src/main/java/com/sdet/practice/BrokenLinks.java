@@ -23,11 +23,11 @@ public class BrokenLinks {
 	private static void findBrokenLinks() {
 
 		ChromeOptions chromeOptions = new ChromeOptions();
-		chromeOptions.addArguments("--start-maximized");
+		// chromeOptions.addArguments("--start-maximized");
 		chromeOptions.addArguments("headless", "true");
 		WebDriver webDriver = new ChromeDriver(chromeOptions);
 
-		WebDriverWait wedDriverWait = new WebDriverWait(webDriver, Duration.ofSeconds(30));
+		WebDriverWait wedDriverWait = new WebDriverWait(webDriver, Duration.ofSeconds(120));
 
 		By links = By.xpath("//*[@href]");
 		String url = null;
@@ -68,6 +68,13 @@ public class BrokenLinks {
 
 		catch (IOException ex) {
 			System.err.println(" Malformed URL: " + urlToCheck);
+		}
+
+		finally {
+
+			if (connection != null) {
+				connection.disconnect();
+			}
 		}
 
 		return false;

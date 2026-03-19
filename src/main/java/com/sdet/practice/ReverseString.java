@@ -33,16 +33,15 @@ public class ReverseString {
 
 	public static String reverseStringInSameIndex(String input) {
 
-		StringBuilder stringBuilder = null;
+		if (input == null || input.isEmpty()) {
+			return "";
+		}
 
-		if (!input.isEmpty()) {
+		String[] stringArray = input.split(" ");
+		StringBuilder stringBuilder = new StringBuilder();
 
-			String[] stringArray = input.split(" ");
-			stringBuilder = new StringBuilder();
-
-			for (String eachItem : stringArray) {
-				stringBuilder.append(reverseString(eachItem)).append(" ");
-			}
+		for (String eachItem : stringArray) {
+			stringBuilder.append(reverseString(eachItem)).append(" ");
 		}
 
 		return stringBuilder.toString().trim();

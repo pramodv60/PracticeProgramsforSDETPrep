@@ -5,7 +5,7 @@ public class ReverseCharactersOnly {
 	public static void main(String[] args) {
 		
 		
-		String input = "1ab2";
+		String input = "1ab2cd3ef4";
 		
 		System.out.println("Character only reversed string: " + characterOnlyReversed(input));
 
@@ -15,11 +15,11 @@ public class ReverseCharactersOnly {
 
 		char[] characterArray = input.toCharArray();
 
-		if(input.length() > 0) {
+		if(!input.isEmpty()) {
 			
 			int rightPointer = characterArray.length - 1;
 			int leftPointer = 0;
-			char temp;
+			char temp = ' ';
 			
 			while(leftPointer < rightPointer) {
 				

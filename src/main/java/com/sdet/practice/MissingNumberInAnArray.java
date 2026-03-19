@@ -18,12 +18,8 @@ public class MissingNumberInAnArray {
 			int totalSumOfArrayElements = calculateArraySum(input);
 
 			for (int index = 0; index < input.length; index++) {
-
 				sum = sum + input[index];
 			}
-
-			System.out.println(sum);
-			System.out.println(totalSumOfArrayElements);
 
 			if (sum > totalSumOfArrayElements) {
 

@@ -23,3 +23,6 @@ pom.releaseBackup
 # OS
 .DS_Store
 Thumbs.db
+
+# Git identity scripts (local use only)
+scripts/
